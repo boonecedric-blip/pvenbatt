@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #0a1628 0%, #1a2744 50%, #0d1f3c 100%);
+  min-height: 100vh;
+  color: #e8edf5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Input number arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+  height: 30px;
+}
+
+/* Focus styles */
+input:focus {
+  border-color: rgba(251, 191, 36, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+}
+
+/* File input hover */
+label:has(input[type="file"]):hover {
+  border-color: rgba(251, 191, 36, 0.5) !important;
+  background: rgba(251, 191, 36, 0.05) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .main-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .summary-cards {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .annual-projection {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  
+  .results-table {
+    font-size: 12px !important;
+  }
+}
+
+/* Animation for loading */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Recharts customization */
+.recharts-default-tooltip {
+  background: #1a2744 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+.recharts-tooltip-label {
+  color: #e8edf5 !important;
+}
+
+/* Tab button transitions */
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
