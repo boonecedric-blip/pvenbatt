@@ -1,35 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="sun" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#fbbf24"/>
       <stop offset="100%" style="stop-color:#f59e0b"/>
     </linearGradient>
-    <linearGradient id="battGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bat" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#3b82f6"/>
       <stop offset="100%" style="stop-color:#1d4ed8"/>
     </linearGradient>
   </defs>
-  
-  <!-- Sun rays -->
-  <g fill="url(#sunGrad)">
-    <circle cx="35" cy="35" r="18"/>
-    <rect x="33" y="5" width="4" height="12" rx="2"/>
-    <rect x="33" y="53" width="4" height="12" rx="2"/>
-    <rect x="5" y="33" width="12" height="4" rx="2"/>
-    <rect x="53" y="33" width="12" height="4" rx="2"/>
-    <rect x="12" y="12" width="4" height="12" rx="2" transform="rotate(45 14 18)"/>
-    <rect x="54" y="12" width="4" height="12" rx="2" transform="rotate(-45 56 18)"/>
-    <rect x="12" y="46" width="4" height="12" rx="2" transform="rotate(-45 14 52)"/>
-    <rect x="54" y="46" width="4" height="12" rx="2" transform="rotate(45 56 52)"/>
-  </g>
-  
-  <!-- Battery -->
-  <g fill="url(#battGrad)">
-    <rect x="55" y="50" width="35" height="45" rx="4"/>
-    <rect x="65" y="45" width="15" height="6" rx="2"/>
-    <!-- Charge level -->
-    <rect x="59" y="62" width="27" height="29" rx="2" fill="#22c55e"/>
-    <!-- Lightning bolt -->
-    <path d="M75 58 L68 72 L73 72 L70 88 L82 70 L76 70 L80 58 Z" fill="white"/>
-  </g>
+  <circle cx="35" cy="35" r="18" fill="url(#sun)"/>
+  <rect x="55" y="50" width="35" height="45" rx="4" fill="url(#bat)"/>
+  <rect x="59" y="62" width="27" height="29" rx="2" fill="#22c55e"/>
+  <path d="M75 58 L68 72 L73 72 L70 88 L82 70 L76 70 L80 58 Z" fill="white"/>
 </svg>
